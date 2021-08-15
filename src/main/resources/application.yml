@@ -1,2 +1,20 @@
 server:
   port: 8081
+
+
+spring:
+  hbase:
+    group: hbase
+    userName: hbase
+    simulation:
+      rsHandlerCount: 200
+      clusterName: logger
+
+  zookeeper:
+    simulation:
+      port: 2181
+      quorum: 192.168.0.100:2181
+      rootNode: /itclj_simulation
+    hbase:
+      source: 192.168.0.100:2181
+      target: 192.168.0.100:2182
